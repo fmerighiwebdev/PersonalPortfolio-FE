@@ -1,0 +1,19 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Light mode colors */
+  --light-grey: #E5E1DA;
+  --floral-white: #FBF9F1;
+  --light-cyan: #AAD7D9;
+  --dark-cyan: #92C7CF;
+
+  /* Dark mode colors */
+  --light-grayish-blue: #DDE6ED;
+  --dark-grayish-blue: #9DB2BF;
+  --light-navy-blue: #526D82;
+  --navy-blue: #27374D;
+}
