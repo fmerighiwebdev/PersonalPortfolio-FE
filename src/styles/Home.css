@@ -1,0 +1,195 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    padding: 0 0 2rem 0;
+    margin: 0;
+    color: var(--text-color);
+    animation: fadeInFromLeft 1s ease-in-out;
+}
+
+span {
+    color: var(--dark-cyan);
+}
+
+.hero-links {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--light-grey);
+}
+
+.hero-social {
+    display: flex;
+    gap: 3rem;
+}
+
+.hero-content:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-social a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.hero-social a:hover {
+    color: var(--dark-cyan);
+}
+
+.hero-social a:nth-child(1) {
+    animation: fadeInFromBottom .75s .75s ease-in-out forwards;
+}
+
+.hero-social a:nth-child(2) {
+    animation: fadeInFromBottom .75s 1.05s ease-in-out forwards;
+}
+
+.hero-social a:nth-child(3) {
+    animation: fadeInFromBottom .75s 1.35s ease-in-out forwards;
+}
+
+.contact-me-link {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border: 2px solid var(--dark-cyan);
+    border-radius: 5px;
+    color: var(--dark-cyan);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s 1.65s ease-in-out forwards;
+}
+
+.contact-me-link:hover {
+    background-color: var(--dark-cyan);
+    color: var(--floral-white);
+}
+
+.hero-subtitles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    text-align: center;
+    padding: 0 0 2rem 0;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.hero-subtitles h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+}
+
+.hero-subtitles h2:hover {
+    color: var(--dark-cyan);
+}
+
+.projects-link {
+    display: block;
+    text-decoration: none;
+    margin-top: 2.375rem;
+    padding: .5rem 1rem;
+    background-color: var(--dark-cyan);
+    font-size: 1.25rem;
+    border-radius: 5px;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.projects-link:hover {
+    background-color: #2e7b79;
+}
+
+.down-arrow-container {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    animation: bounce 1s infinite;
+}
+
+.down-arrow-icon {
+    cursor: pointer;
+}
+
+.shapes-up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: -1;
+}
+
+.shapes-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    z-index: -1;
+}
+
+.about-me, .skills, .projects, .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border: 2px solid red;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
