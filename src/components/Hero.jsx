@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 import downArrow from "../images/down-arrow.svg";
 import shapesUp from "../images/shapes-up.svg";
@@ -10,9 +9,9 @@ import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-
 
 function Hero() {
     return (
-        <main className="hero-section">
+        <main className="hero-section" id="hero">
             <Container className="hero-container">
-                <Row>
+                <Row className="test">
                     <Col className="hero-content" lg={6}>
                         <h1 className="hero-title">Hello, <br></br> I'm <span>Francesco Merighi</span></h1>
                         <div className="hero-links">

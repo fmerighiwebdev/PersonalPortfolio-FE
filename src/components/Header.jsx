@@ -5,6 +5,7 @@ import "../styles/Header.css";
 
 function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
     handleScroll();
@@ -20,11 +21,15 @@ function Header() {
     });
   }
 
+  function handleMenuClick() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <header className={isScrolled ? "header-scroll" : "header"}>
       <Container className="header-container">
         <div className="header-logo">
-            <h2>FM</h2>
+            <h2><a href="#hero">FM</a></h2>
         </div>
         
         <nav className="header-nav">
@@ -34,6 +39,12 @@ function Header() {
                 <li className="menu-item"><a href="#projects">My Projects</a></li>
                 <li className="menu-item"><a href="#contacts">Contacts</a></li>
             </ul>
+
+            <div onClick={handleMenuClick} className={isMenuOpen ? "header-hamburger active" : "header-hamburger"}>
+                <div className="hamburger-line"></div>
+                <div className="hamburger-line"></div>
+                <div className="hamburger-line"></div>
+            </div>
         </nav>
       </Container>
     </header>
