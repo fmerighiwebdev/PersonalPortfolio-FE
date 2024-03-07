@@ -26,7 +26,7 @@ function Header() {
   }
 
   return (
-    <header className={isScrolled ? "header-scroll" : "header"}>
+    <header className={isScrolled || isMenuOpen ? "header-scroll" : "header"}>
       <Container className="header-container">
         <div className="header-logo">
             <h2><a href="#hero">FM</a></h2>
@@ -46,6 +46,16 @@ function Header() {
                 <div className="hamburger-line"></div>
             </div>
         </nav>
+
+        {isMenuOpen ? 
+          <nav className="header-nav-mobile">
+            <ul className="header-menu-mobile">
+              <li className="menu-item-mobile"><a href="#about-me">About me</a></li>
+              <li className="menu-item-mobile"><a href="#skills">My Skills</a></li>
+              <li className="menu-item-mobile"><a href="#projects">My Projects</a></li>
+              <li className="menu-item-mobile"><a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav> : null}
       </Container>
     </header>
   );

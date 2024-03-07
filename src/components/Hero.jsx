@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import downArrow from "../images/down-arrow.svg";
 import shapesUp from "../images/shapes-up.svg";
 import shapesDown from "../images/shapes-down.svg";
+import shapesUpDesk from "../images/shapes-up-desktop.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
@@ -11,7 +12,7 @@ function Hero() {
     return (
         <main className="hero-section" id="hero">
             <Container className="hero-container">
-                <Row className="test">
+                <Row>
                     <Col className="hero-content" lg={6}>
                         <h1 className="hero-title">Hello, <br></br> I'm <span>Francesco Merighi</span></h1>
                         <div className="hero-links">
@@ -54,6 +55,9 @@ function Hero() {
             </div>
             <div className="shapes-container">
                 <img className="shapes-down" src={shapesDown} alt="Shapes up" />
+            </div>
+            <div className="shapes-container">
+                <img className="shapes-up-desk" src={shapesUpDesk} alt="Shapes up" />
             </div>
         </main>
     );

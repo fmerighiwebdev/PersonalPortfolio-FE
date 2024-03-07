@@ -6,7 +6,7 @@
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 1.443rem + 2.286vw, 3.5rem);
     padding: 0 0 2rem 0;
     margin: 0;
     color: var(--text-color);
@@ -39,7 +39,7 @@ span {
 
 .hero-social a {
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 1.814rem + 0.762vw, 2.5rem);
     color: var(--text-color);
     transition: all .3s ease-in-out;
     opacity: 0;
@@ -64,7 +64,7 @@ span {
 .contact-me-link {
     text-decoration: none;
     padding: .5rem 1rem;
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
     border: 2px solid var(--dark-cyan);
     border-radius: 5px;
     color: var(--dark-cyan);
@@ -90,7 +90,7 @@ span {
 }
 
 .hero-subtitles h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 1.629rem + 1.524vw, 3rem);
     margin: 0;
     color: var(--text-color);
     transition: all .3s ease-in-out;
@@ -106,7 +106,7 @@ span {
     margin-top: 2.375rem;
     padding: .5rem 1rem;
     background-color: var(--dark-cyan);
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
     border-radius: 5px;
     color: white;
     transition: all .3s ease-in-out;
@@ -128,18 +128,28 @@ span {
 }
 
 .shapes-up {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: clamp(18.75rem, 4.821rem + 57.143vw, 56.25rem);
     z-index: -1;
+}
+
+.shapes-up-desk {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: clamp(18.75rem, 4.821rem + 57.143vw, 56.25rem);
+    z-index: -1;
+
 }
 
 .shapes-down {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 25%;
+    width: clamp(9.375rem, 4.732rem + 19.048vw, 21.875rem);
     z-index: -1;
 }
 
@@ -237,6 +247,7 @@ span {
     left: -50px;
     width: 225px;
     z-index: -1;
+    animation: bounceBalls 2.5s infinite;
 }
 
 .ball-dark-contacts-2 {
@@ -245,6 +256,7 @@ span {
     right: -50px;
     width: 200px;
     z-index: -1;
+    animation: bounceBalls 2s infinite;
 }
 
 .ball-light-contacts-3 {
@@ -302,6 +314,17 @@ span {
     }
 }
 
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -324,9 +347,29 @@ span {
     .contacts-item {
         gap: 1.5rem;
     }
+
+    .hero-content:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .shapes-up {
+        display: block;
+    }
+
+    .shapes-up-desk {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 90vh;
+    }
+
+    .hero-social {
+        gap: 1.75rem;
+    }
+
     .ball-light-contacts-1 {
         width: 150px;
     }
