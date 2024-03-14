@@ -63,19 +63,19 @@ span {
 
 .contact-me-link {
     text-decoration: none;
+    display: block;
     padding: .5rem 1rem;
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
-    border: 2px solid var(--dark-cyan);
+    background-color: var(--dark-cyan);
     border-radius: 5px;
-    color: var(--dark-cyan);
+    color: white;
     transition: all .3s ease-in-out;
     opacity: 0;
     animation: fadeIn 1s 1.65s ease-in-out forwards;
 }
 
 .contact-me-link:hover {
-    background-color: var(--dark-cyan);
-    color: var(--floral-white);
+    background-color: #2a6f6d;
 }
 
 .hero-subtitles {
@@ -105,15 +105,16 @@ span {
     text-decoration: none;
     margin-top: 2.375rem;
     padding: .5rem 1rem;
-    background-color: var(--dark-cyan);
+    border: 2px solid var(--dark-cyan);
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
     border-radius: 5px;
-    color: white;
+    color: var(--dark-cyan);
     transition: all .3s ease-in-out;
 }
 
 .projects-link:hover {
-    background-color: #2a6f6d;
+    background-color: var(--dark-cyan);
+    color: var(--floral-white);
 }
 
 .down-arrow-container {
@@ -153,32 +154,251 @@ span {
     z-index: -1;
 }
 
-.about-me, .skills, .projects, .contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.about-me, .skills, .projects {
+    padding-block: 5rem;
 }
 
-.about-me-content {
-    border: 2px solid blue;
+.about-me-content p {
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    margin: 0;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
 }
 
-.about-me-content:nth-child(1), .skills-content:nth-child(2) {
+.about-me-content:nth-child(1) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 2rem;
+    background-color: #29989420;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 60%;
 }
 
-.about-me-content:nth-child(2), .skills-content:nth-child(1) {
+.about-me-content:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    width: 40%;
+}
+
+.about-me-content:nth-child(2) img:nth-child(1) {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    width: 250px;
+    animation: bounceBalls 2s infinite;
+}
+
+.about-me-content:nth-child(2) img:nth-child(2) {
+    position: absolute;
+    width: 200px;
+    top: 200px;
+    right: 110px;
+    animation: bounceBalls 2.5s infinite;
+}
+
+.about-me-content:nth-child(2) img:nth-child(3) {
+    position: absolute;
+    top: 75px;
+    right: 100px;
+    width: 150px;
+    animation: bounceBalls 3s infinite;
+}
+
+.about-me-title, .skills-title, .projects-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--dark-cyan);
+    margin: 0;
+}
+
+.cv-download {
+    padding: .5rem 1rem;
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
+    border: 2px solid var(--dark-cyan);
+    background-color: transparent;
+    width: min(250px, 100%);
+    border-radius: 5px;
+    color: var(--dark-cyan);
+    transition: all .3s ease-in-out;
+}
+
+.cv-download:hover {
+    background-color: var(--dark-cyan);
+    color: white;
+}
+
+.cv-download-container {
+    position: relative;
+}
+
+.choice-container {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    transition: all .3s ease-in-out;
+    animation: fadeInFromBottom .3s ease-in-out;
+    background-color: white;
+}
+
+.choice-container a {
+    text-decoration: none;
+    padding: .25rem .5rem;
+    border-radius: 5px;
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
+    color: var(--dark-cyan);
+    transition: all .3s ease-in-out;
+}
+
+.choice-container a:hover {
+    background-color: var(--light-grey);
+}
+
+.skills-content, .projects-content {
+    margin-top: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.skills-item {
+    border: 1.5px solid var(--light-cyan);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.skills-item:hover {
+    box-shadow: 0 0 10px 0 var(--light-cyan);
+}
+
+.skills-item p, .skills-item li {
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+}
+
+.skills-item li::marker {
+    color: var(--dark-cyan);
+}
+
+.projects-grid {
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.projects-item {
+    border: 1.5px solid var(--light-cyan);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.projects-item:hover {
+    box-shadow: 0 0 10px 0 var(--light-cyan);
+}
+
+.logo-container {
+    width: min(200px, 100%);
+    height: 175px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.project-name h4 {
+    font-size: clamp(1.5rem, 1.407rem + 0.381vw, 1.75rem);
+    margin: 0;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+}
+
+.project-name p {
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    margin: 0;
+    text-align: center;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+}
+
+.project-description p {
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    margin: 0;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+}
+
+.project-technologies p {
+    text-align: center;
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+}
+
+.project-technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: .5rem auto;
+}
+
+.project-technologies li {
+    font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    background-color: rgba(202, 255, 255, 0.67);
+    color: var(--dark-cyan);
+    font-weight: bold;
+    padding: .25rem .5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.project-links a {
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1rem;
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
+    border: 2px solid var(--dark-cyan);
+    border-radius: 5px;
+    color: var(--dark-cyan);
+    transition: all .3s ease-in-out;
+}
+
+.project-links a:hover {
+    background-color: var(--dark-cyan);
+    color: white;
 }
 
 .contacts {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .contacts-title {
@@ -359,6 +579,45 @@ span {
     .shapes-up-desk {
         display: none;
     }
+
+    .about-me-container .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-me-content:nth-child(1) {
+        width: 100%;
+    }
+
+    .about-me-content:nth-child(2) {
+        width: 100%;
+        height: 400px;
+    }
+
+    .about-me-content:nth-child(2) img:nth-child(1) {
+        position: absolute;
+        bottom: 25px;
+        left: 175px;
+        width: 200px;
+    }
+    
+    .about-me-content:nth-child(2) img:nth-child(2) {
+        position: absolute;
+        width: 150px;
+        top: 75px;
+        right: 250px;
+    }
+    
+    .about-me-content:nth-child(2) img:nth-child(3) {
+        position: absolute;
+        top: 25px;
+        right: 200px;
+        width: 100px;
+    }
+
+    .skills-content:nth-child(1) {
+        order: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -386,5 +645,32 @@ span {
 
     .contacts-column:nth-child(2) .contacts-item h4 {
         font-size: 1.25rem;
+    }
+
+    .choice-container {
+        top: 55px;
+        padding: .5rem 1rem;
+        animation: fadeIn .3s ease-in-out;
+    }
+
+    .about-me-content:nth-child(2) img:nth-child(1) {
+        position: absolute;
+        bottom: 50px;
+        left: 95px;
+        width: 200px;
+    }
+    
+    .about-me-content:nth-child(2) img:nth-child(2) {
+        position: absolute;
+        width: 150px;
+        top: 50px;
+        right: 150px;
+    }
+    
+    .about-me-content:nth-child(2) img:nth-child(3) {
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        width: 100px;
     }
 }

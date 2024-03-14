@@ -14,7 +14,7 @@ function Hero() {
             <Container className="hero-container">
                 <Row>
                     <Col className="hero-content" lg={6}>
-                        <h1 className="hero-title">Hello, <br></br> I'm <span>Francesco Merighi</span></h1>
+                        <h1 className="hero-title">Ciao, <br></br> sono <span>Francesco Merighi</span></h1>
                         <div className="hero-links">
                             <div class="hero-social">
                                 <a href="https://www.linkedin.com/in/francesco-merighi-373939217/" target="_blank" rel="noreferrer">
@@ -28,7 +28,7 @@ function Hero() {
                                 </a>
                             </div>
                             <div className="hero-contact">
-                                <a className="contact-me-link" href="#contacts">Contact me!</a>
+                                <a className="contact-me-link" href="#contacts">Contattami</a>
                             </div>
                         </div>
                     </Col>
@@ -38,7 +38,7 @@ function Hero() {
                             <h2>UI/UX Designer</h2>
                         </div>
                         <div className="hero-projects">
-                            <a className="projects-link" href="#projects">See my projects!</a>
+                            <a className="projects-link" href="#projects">I miei progetti</a>
                         </div>
                     </Col>
                 </Row>

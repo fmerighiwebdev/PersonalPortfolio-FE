@@ -35,9 +35,9 @@ function Header() {
         <nav className="header-nav">
             <ul className="header-menu">
                 <li className="menu-item"><a href="#about-me">About me</a></li>
-                <li className="menu-item"><a href="#skills">My Skills</a></li>
-                <li className="menu-item"><a href="#projects">My Projects</a></li>
-                <li className="menu-item"><a href="#contacts">Contacts</a></li>
+                <li className="menu-item"><a href="#skills">Skills</a></li>
+                <li className="menu-item"><a href="#projects">Progetti</a></li>
+                <li className="menu-item"><a href="#contacts">Contatti</a></li>
             </ul>
 
             <div onClick={handleMenuClick} className={isMenuOpen ? "header-hamburger active" : "header-hamburger"}>
