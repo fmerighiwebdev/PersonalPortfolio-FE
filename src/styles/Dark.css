@@ -3,16 +3,190 @@
     z-index: 999;
 }
 
+.text-dark {
+    color: var(--floral-white) !important;
+}
+
+.header-menu-dark li {
+    color: var(--floral-white);
+}
+
+.header-menu-dark li a {
+    color: var(--floral-white);
+}
+
+.header-menu-dark li a:hover {
+    color: var(--light-cyan);
+}
+
+.header-menu-dark li a::after {
+    background-color: var(--light-cyan);
+}
+
+.hamburger-line-dark {
+    background-color: var(--floral-white) !important;
+}
+
 .header-nav-mobile-dark {
     background-color: rgb(41, 41, 41) !important;
+}
+
+.header-nav-mobile-dark li a {
+    color: var(--floral-white);
+}
+
+.header-nav-mobile-dark li {
+    color: var(--floral-white);
 }
 
 .hero-dark, .about-me-dark, .skills-dark, .projects-dark, .contacts-dark {
     background-color: rgb(41, 41, 41);
 }
 
+.hero-dark span {
+    color: var(--light-cyan);
+}
+
+.hero-dark .hero-social a {
+    color: var(--floral-white);
+}
+
+.hero-dark .hero-social a:hover {
+    color: var(--light-cyan);
+}
+
+.hero-dark .contact-me-link {
+    color: rgb(41, 41, 41);
+    background-color: var(--light-cyan);
+}
+
+.hero-dark .hero-subtitles h2 {
+    color: var(--floral-white);
+}
+
+.hero-dark .hero-subtitles h2:hover {
+    color: var(--light-cyan);
+}
+
+.hero-dark .hero-projects a {
+    color: var(--light-cyan);
+    border: 1px solid var(--light-cyan);
+}
+
+.hero-dark .hero-projects a:hover {
+    color: rgb(41, 41, 41);
+    background-color: var(--light-cyan);
+}
+
+.about-me-dark .about-me-title {
+    color: var(--light-cyan);
+}
+
+.about-me-dark span {
+    color: var(--light-cyan);
+    font-weight: bold;
+}
+
+.about-me-dark .cv-download {
+    color: var(--light-cyan);
+    border: 1px solid var(--light-cyan);
+}
+
+.about-me-dark .cv-download:hover {
+    color: rgb(41, 41, 41);
+    background-color: var(--light-cyan);
+}
+
+.choice-container-dark .choice-item {
+    color: var(--light-cyan);
+}
+
+.skills-dark .skills-title {
+    color: var(--light-cyan);
+}
+
+.skills-dark p, .skills-dark li {
+    color: var(--floral-white);
+}
+
+.skills-dark .skills-item {
+    border: 1px solid var(--light-cyan);
+    transition: all .3s ease-in-out !important;
+}
+
+.skills-dark .skills-item:hover {
+    box-shadow: 0 0 10px var(--light-cyan);
+}
+
+.skills-dark span {
+    color: var(--light-cyan);
+    font-weight: bold;
+}
+
+.skills-dark .skills-item li::marker {
+    color: var(--light-cyan);
+}
+
+.projects-dark .projects-title {
+    color: var(--light-cyan);
+}
+
+.projects-dark p, .projects-dark li {
+    color: var(--floral-white);
+}
+
+.projects-dark .projects-item {
+    border: 1px solid var(--light-cyan);
+    transition: all .3s ease-in-out !important;
+}
+
+.projects-dark .projects-item:hover {
+    box-shadow: 0 0 10px var(--light-cyan);
+}
+
+.projects-dark h4 {
+    color: var(--light-cyan);
+}
+
+.projects-dark .project-technologies li {
+    font-weight: normal;
+}
+
+.projects-dark .project-links a {
+    color: var(--light-cyan);
+    border: 1px solid var(--light-cyan);
+}
+
+.projects-dark .project-links a:hover {
+    color: rgb(41, 41, 41);
+    background-color: var(--light-cyan);
+}
+
+.contacts-dark .contacts-title {
+    color: var(--light-cyan);
+}
+
+.contacts-dark p, .contacts-dark li {
+    color: var(--floral-white);
+}
+
+.contacts-dark .contacts-icon {
+    background-color: var(--light-cyan);
+    color: rgb(41, 41, 41);
+}
+
+.contacts-dark .contacts-column:nth-child(3) .contacts-item a {
+    color: var(--light-cyan);
+    border: 1px solid var(--light-cyan);
+}
+
 .footer-dark {
     background-color: rgb(54, 54, 54);
+}
+
+.footer-dark span {
+    color: var(--light-cyan);
+    transition: all .3s ease-in-out;
 }
 
 .choice-container-dark {
@@ -21,28 +195,4 @@
 
 .choice-container-dark a:hover {
     background-color: rgba(128, 128, 128, 0.295);
-}
-
-.text-dark-link {
-    color: var(--floral-white) !important;
-}
-
-.text-dark-link:hover {
-    color: var(--dark-cyan) !important;
-}
-
-.text-dark {
-    color: var(--floral-white) !important;
-}
-
-.hamburger-line-dark {
-    background-color: var(--floral-white) !important;
-}
-
-.down-arrow-icon-dark path {
-    fill: var(--floral-white) !important;
-}
-
-.project-list-item-dark {
-    background-color: rgba(202, 255, 255, 0.816) !important;
 }

@@ -11,20 +11,20 @@ import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-
 
 function Hero({ isLightMode }) {
     return (
-        <main className={isLightMode ? "hero-section" : "hero-section hero-dark"} id="hero">
+        <main className={!isLightMode ? "hero-dark hero-section" : "hero-section"} id="hero">
             <Container className="hero-container">
                 <Row>
                     <Col className="hero-content" lg={6}>
                         <h1 className={!isLightMode ? "hero-title text-dark" : "hero-title"}>Ciao, <br></br> sono <span>Francesco Merighi</span></h1>
                         <div className="hero-links" style={!isLightMode ? { borderTop: '2px solid rgb(70, 70, 70)' } : null}>
-                            <div class="hero-social">
-                                <a className={!isLightMode ? "text-dark-link": null} href="https://www.linkedin.com/in/francesco-merighi-373939217/" target="_blank" rel="noreferrer">
+                            <div className="hero-social">
+                                <a aria-label="Linkedin Link" href="https://www.linkedin.com/in/francesco-merighi-373939217/" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
-                                <a className={!isLightMode ? "text-dark-link": null} href="https://github.com/francescomerighi1202" target="_blank" rel="noreferrer">
+                                <a aria-label="GitHub Link" href="https://github.com/francescomerighi1202" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faGithub} />
                                 </a>
-                                <a className={!isLightMode ? "text-dark-link": null} href="https://www.instagram.com/emmeelite/" target="_blank" rel="noreferrer">
+                                <a aria-label="Instagram Link" href="https://www.instagram.com/emmeelite/" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
                             </div>
@@ -34,9 +34,9 @@ function Hero({ isLightMode }) {
                         </div>
                     </Col>
                     <Col className="hero-content" lg={6}>
-                        <div class="hero-subtitles" style={!isLightMode ? { borderBottom: '2px solid rgb(70, 70, 70)' } : null}>
-                            <h2 className={!isLightMode ? "text-dark": null}>Web Developer</h2>
-                            <h2 className={!isLightMode ? "text-dark": null}>UI/UX Designer</h2>
+                        <div className="hero-subtitles" style={!isLightMode ? { borderBottom: '2px solid rgb(70, 70, 70)' } : null}>
+                            <h2>Web Developer</h2>
+                            <h2>UI/UX Designer</h2>
                         </div>
                         <div className="hero-projects">
                             <a className="projects-link" href="#projects">I miei progetti</a>

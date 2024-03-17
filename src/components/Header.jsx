@@ -43,33 +43,33 @@ function Header({ isLightMode, setIsLightMode }) {
         </div>
         
         <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="menu-item"><a className={!isLightMode ? "text-dark-link" : null} href="#about-me">About me</a></li>
-                <li className="menu-item"><a className={!isLightMode ? "text-dark-link" : null} href="#skills">Skills</a></li>
-                <li className="menu-item"><a className={!isLightMode ? "text-dark-link" : null} href="#projects">Progetti</a></li>
-                <li className="menu-item"><a className={!isLightMode ? "text-dark-link" : null} href="#contacts">Contatti</a></li>
-                <button onClick={handleSwitchMode} className={!isLightMode ? "switch-mode text-dark" : "switch mode"}>
+            <ul className={!isLightMode ? "header-menu-dark header-menu" : "header-menu"}>
+                <li className="menu-item"><a href="#about-me">About me</a></li>
+                <li className="menu-item"><a href="#skills">Skills</a></li>
+                <li className="menu-item"><a href="#projects">Progetti</a></li>
+                <li className="menu-item"><a href="#contacts">Contatti</a></li>
+                <li onClick={handleSwitchMode} className="switch-mode">
                   {!isLightMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
-                </button>
+                </li>
             </ul>
 
             <div onClick={handleMenuClick} className={isMenuOpen ? "header-hamburger active" : "header-hamburger"}>
-                <div className={!isLightMode ? "hamburger-line hamburger-line-dark" : "hamburger-line"}></div>
-                <div className={!isLightMode ? "hamburger-line hamburger-line-dark" : "hamburger-line"}></div>
-                <div className={!isLightMode ? "hamburger-line hamburger-line-dark" : "hamburger-line"}></div>
+                <div className={!isLightMode ? "hamburger-line-dark hamburger-line" : "hamburger-line"}></div>
+                <div className={!isLightMode ? "hamburger-line-dark hamburger-line" : "hamburger-line"}></div>
+                <div className={!isLightMode ? "hamburger-line-dark hamburger-line" : "hamburger-line"}></div>
             </div>
         </nav>
 
         {isMenuOpen ? 
-          <nav className={!isLightMode ? "header-nav-mobile header-nav-mobile-dark" : "header-nav-mobile"}>
+          <nav className={!isLightMode ? "header-nav-mobile-dark header-nav-mobile" : "header-nav-mobile"}>
             <ul className="header-menu-mobile">
-              <li className="menu-item-mobile"><a className={!isLightMode ? "text-dark-link" : null} onClick={handleMenuClick} href="#about-me">About me</a></li>
-              <li className="menu-item-mobile"><a className={!isLightMode ? "text-dark-link" : null} onClick={handleMenuClick} href="#skills">My Skills</a></li>
-              <li className="menu-item-mobile"><a className={!isLightMode ? "text-dark-link" : null} onClick={handleMenuClick} href="#projects">My Projects</a></li>
-              <li className="menu-item-mobile"><a className={!isLightMode ? "text-dark-link" : null} onClick={handleMenuClick} href="#contacts">Contacts</a></li>
-              <button onClick={handleSwitchMode} className={!isLightMode ? "switch-mode text-dark" : "switch mode"}>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#about-me">About me</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#skills">My Skills</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#projects">My Projects</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#contacts">Contacts</a></li>
+              <li onClick={handleSwitchMode} className="switch-mode">
                 {!isLightMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
-              </button>
+              </li>
             </ul>
           </nav> : null}
       </Container>

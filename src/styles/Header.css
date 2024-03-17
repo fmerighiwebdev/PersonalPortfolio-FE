@@ -6,7 +6,6 @@
     width: 100%;
     transition: all .3s ease-in-out;
     z-index: 999;
-    animation: fadeInFromTopBounce .75s forwards;
 }
 
 .header-scroll {
@@ -25,7 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
 .header-logo h2 {
@@ -73,7 +71,7 @@
     width: 100%;
 }
 
-.header-menu button, .header-menu-mobile button {
+.switch-mode {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -96,22 +94,6 @@
 
 .hamburger-line + .hamburger-line {
     margin-top: 5px;
-}
-
-@keyframes fadeInFromTopBounce {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translateY(15px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }
 
 @media (max-width: 992px) {

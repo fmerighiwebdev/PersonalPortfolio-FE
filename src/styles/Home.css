@@ -112,7 +112,7 @@ span {
     margin-top: 2.375rem;
     opacity: 0;
     padding: .5rem 1rem;
-    border: 2px solid var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
     border-radius: 5px;
     color: var(--dark-cyan);
@@ -223,7 +223,7 @@ span {
 .cv-download {
     padding: .5rem 1rem;
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
-    border: 2px solid var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
     background-color: transparent;
     width: min(250px, 100%);
     border-radius: 5px;
@@ -279,15 +279,15 @@ span {
 }
 
 .skills-item {
-    border: 1.5px solid var(--light-cyan);
+    border: 1.5px solid var(--dark-cyan);
     border-radius: 20px;
     padding: 1.5rem;
     width: 100%;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out !important;
 }
 
 .skills-item:hover {
-    box-shadow: 0 0 10px 0 var(--light-cyan);
+    box-shadow: 0 0 10px 0 var(--dark-cyan);
 }
 
 .skills-item p, .skills-item li {
@@ -308,7 +308,7 @@ span {
 }
 
 .projects-item {
-    border: 1.5px solid var(--light-cyan);
+    border: 1.5px solid var(--dark-cyan);
     border-radius: 20px;
     padding: 2rem 1.5rem;
     width: 100%;
@@ -317,10 +317,11 @@ span {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    transition: all .3s ease-in-out !important;
 }
 
 .projects-item:hover {
-    box-shadow: 0 0 10px 0 var(--light-cyan);
+    box-shadow: 0 0 10px 0 var(--dark-cyan);
 }
 
 .logo-container {
@@ -374,7 +375,7 @@ span {
 
 .project-technologies li {
     font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
-    background-color: rgba(202, 255, 255, 0.67);
+    background-color: rgba(76, 214, 214, 0.473);
     color: var(--dark-cyan);
     font-weight: bold;
     padding: .25rem .5rem;
@@ -387,7 +388,7 @@ span {
     display: block;
     padding: .5rem 1rem;
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
-    border: 2px solid var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
     border-radius: 5px;
     color: var(--dark-cyan);
     transition: all .3s ease-in-out;
@@ -454,7 +455,7 @@ span {
 }
 
 .contacts-column:nth-child(3) .contacts-item a {
-    border: 2px solid var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
     padding: .5rem 1.5rem;
     color: var(--dark-cyan);
     border-radius: 5px;

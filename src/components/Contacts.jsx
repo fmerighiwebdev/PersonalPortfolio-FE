@@ -9,9 +9,9 @@ import ballDark from "../images/ball-dark.svg";
 
 function Contacts({ isLightMode }) {
     return (
-        <section className={!isLightMode ? "contacts contacts-dark" : "contacts"} id="contacts">
+        <section className={!isLightMode ? "contacts-dark contacts" : "contacts"} id="contacts">
             <Container className="contacts-container">
-                <h3 className={!isLightMode ? "contacts-title text-dark" : "contacts-title"}>Contatti</h3>
+                <h3 className="contacts-title">Contatti</h3>
                 <Row>
                     <Col className="contacts-column" lg={4} data-aos="fade-in" data-aos-duration="1000">
                         <div className="contacts-item">
