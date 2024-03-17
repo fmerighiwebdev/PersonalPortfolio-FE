@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ballLight from "../images/ball-light.svg";
 import ballDark from "../images/ball-dark.svg";
 
-function About() {
+function About({ isLightMode }) {
     const [isChoiceShowed, setIsChoiceShowed] = React.useState(false);
 
     function handleChoiceClick() {
@@ -12,35 +12,32 @@ function About() {
     }
 
     return (
-        <section className="about-me" id="about-me">
+        <section className={!isLightMode ? "about-me about-me-dark" : "about-me"} id="about-me">
             <Container className="about-me-container">
                 <Row>
-                    <Col className="about-me-content" lg={6}>
+                    <Col className="about-me-content" lg={6} data-aos="fade-right" data-aos-duration="1000">
                         <h3 className="about-me-title">About Me</h3>
-                        <p>Hi, I'm Francesco Merighi, a <strong>WEB DEVELOPER</strong> and <strong>UI/UX DESIGNER</strong> based in Italy! <br></br> 
-                            I'm passionate about creating beautiful and functional websites and 
-                            applications. <br></br><br></br> 
-                            Among the skills I have acquired over the years, i have become 
-                            very passionate about the world of WEB DEVELOPMENT, 
-                            leading me to learn to use both <strong>FRONT-END</strong> and <strong>BACK-END</strong> technologies. <br></br><br></br>
-                            My passion for PROGRAMMING and MODERN DESIGN (UI/UX) has led me
-                            to develop multiple projects, starting from projects of my interest, up to the creation and management 
-                            of solutions for some local companies. <br></br><br></br>
+                        <p className={!isLightMode ? "text-dark" : null}>Ciao, sono Francesco Merighi, un <strong>WEB DEVELOPER</strong> e <strong>UI/UX DESIGNER</strong>! <br></br>
+                             La mia passione è creare siti web e applicazioni coerenti e funzionali. <br></br><br></br>
+                             Tra le competenze che ho acquisito negli anni, mi ha fatto molto appassionare il mondo dello SVILUPPO WEB,
+                             portandomi ad imparare ad utilizzare sia tecnologie <strong>FRONT-END</strong> che <strong>BACK-END</strong>. <br></br><br></br>
+                             La mia passione per la <strong>PROGRAMMAZIONE</strong> e il <strong>DESIGN MODERNO (UI/UX)</strong> mi ha portato a
+                             sviluppare molteplici progetti, partendo da progetti di mio interesse, fino alla creazione e gestione
+                             di <u>soluzioni</u> per alcune aziende locali. <br></br><br></br>
 
-                            I am convinced that technology is constantly evolving and 
-                            this motivates me to constantly update my knowledge and 
-                            skills and I am sure that the path I have undertaken 
-                            will allow me to continue to grow and achieve my goals. <br></br> <br></br>
+                             Sono convinto che la tecnologia sia in continua evoluzione e
+                             questo mi motiva ad aggiornare costantemente le mie conoscenze e
+                             competenze e sono sicuro che il percorso che ho intrapreso
+                             mi permetterà di continuare a crescere e raggiungere i miei obiettivi. <br></br> <br></br>
 
-                            I'm always looking for new challenges 
-                            and opportunities to grow, so feel free to contact me 
-                            if you have any questions or if you want to work 
-                            with me!</p>
-                        <div class="cv-download-container">
-                            <button onClick={handleChoiceClick} className="cv-download">Download my CV</button>
+                             Sono sempre alla ricerca di nuove sfide
+                             e opportunità di crescita, quindi sentiti libero di <u>contattarmi</u> se hai domande o se vuoi lavorare
+                             con me!</p>
+                        <div className="cv-download-container">
+                            <button onClick={handleChoiceClick} className="cv-download">Download CV</button>
                             {isChoiceShowed ? 
-                                <div className="choice-container">
-                                    <a download href="/docs/cv.pdf" className="choice-item">Italian</a>
+                                <div className={!isLightMode ? "choice-container choice-container-dark" : "choice-container"}>
+                                    <a download href="/docs/cv.pdf" className="choice-item">Italiano</a>
                                     <a download href="/docs/cv-eng.pdf" className="choice-item">English</a>
                                 </div> : null}
                         </div>

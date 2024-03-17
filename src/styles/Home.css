@@ -3,14 +3,17 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: all .3s ease-in-out;
 }
 
 .hero-title {
     font-size: clamp(2rem, 1.443rem + 2.286vw, 3.5rem);
     padding: 0 0 2rem 0;
     margin: 0;
+    opacity: 0;
     color: var(--text-color);
-    animation: fadeInFromLeft 1s ease-in-out;
+    animation: fadeInFromLeft .75s ease-in-out forwards;
+    transition: all .3s ease-in-out;
 }
 
 span {
@@ -23,6 +26,7 @@ span {
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid var(--light-grey);
+    transition: all .3s ease-in-out;
 }
 
 .hero-social {
@@ -50,15 +54,15 @@ span {
 }
 
 .hero-social a:nth-child(1) {
-    animation: fadeInFromBottom .5s .75s ease-in-out forwards;
+    animation: fadeInFromBottom .25s .25s ease-in-out forwards;
 }
 
 .hero-social a:nth-child(2) {
-    animation: fadeInFromBottom .5s 1.05s ease-in-out forwards;
+    animation: fadeInFromBottom .25s .35s ease-in-out forwards;
 }
 
 .hero-social a:nth-child(3) {
-    animation: fadeInFromBottom .5s 1.35s ease-in-out forwards;
+    animation: fadeInFromBottom .25s .45s ease-in-out forwards;
 }
 
 .contact-me-link {
@@ -71,7 +75,7 @@ span {
     color: white;
     transition: all .3s ease-in-out;
     opacity: 0;
-    animation: fadeIn 1s 1.65s ease-in-out forwards;
+    animation: fadeIn .5s .5s ease-in-out forwards;
 }
 
 .contact-me-link:hover {
@@ -87,6 +91,8 @@ span {
     text-align: center;
     padding: 0 0 2rem 0;
     border-bottom: 2px solid var(--light-grey);
+    transition: all .3s ease-in-out;
+    animation: fadeInFromRight .75s ease-in-out forwards;
 }
 
 .hero-subtitles h2 {
@@ -104,12 +110,14 @@ span {
     display: block;
     text-decoration: none;
     margin-top: 2.375rem;
+    opacity: 0;
     padding: .5rem 1rem;
     border: 2px solid var(--dark-cyan);
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
     border-radius: 5px;
     color: var(--dark-cyan);
     transition: all .3s ease-in-out;
+    animation: fadeIn .5s .5s ease-in-out forwards;
 }
 
 .projects-link:hover {
@@ -142,8 +150,6 @@ span {
     top: 0;
     right: 0;
     width: clamp(18.75rem, 4.821rem + 57.143vw, 56.25rem);
-    z-index: -1;
-
 }
 
 .shapes-down {
@@ -151,11 +157,11 @@ span {
     bottom: 0;
     left: 0;
     width: clamp(9.375rem, 4.732rem + 19.048vw, 21.875rem);
-    z-index: -1;
 }
 
 .about-me, .skills, .projects {
-    padding-block: 5rem;
+    padding-block: 6rem;
+    transition: all .3s ease-in-out;
 }
 
 .about-me-content p {
@@ -209,7 +215,7 @@ span {
 }
 
 .about-me-title, .skills-title, .projects-title {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 2.734rem + 0.851vw, 3.5rem);
     font-weight: 500;
     color: var(--dark-cyan);
     margin: 0;
@@ -237,15 +243,15 @@ span {
 
 .choice-container {
     position: absolute;
-    top: 65px;
-    left: 0;
+    top: -5px;
+    left: 275px;
     display: flex;
     gap: 2rem;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
     transition: all .3s ease-in-out;
-    animation: fadeInFromBottom .3s ease-in-out;
+    animation: fadeInFromLeft .3s ease-in-out;
     background-color: white;
 }
 
@@ -355,6 +361,7 @@ span {
 .project-technologies p {
     text-align: center;
     font-size: clamp(1rem, 0.929rem + 0.238vw, 1.25rem);
+    transition: all .3s ease-in-out;
 }
 
 .project-technologies ul {
@@ -399,6 +406,7 @@ span {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: all .3s ease-in-out;
 }
 
 .contacts-title {
@@ -407,6 +415,7 @@ span {
     margin: 0 0 3.5rem 0;
     font-weight: 500;
     color: var(--text-color);
+    transition: all .3s ease-in-out;
 }
 
 .contacts-column {
@@ -466,7 +475,6 @@ span {
     top: 20px;
     left: -50px;
     width: 225px;
-    z-index: -1;
     animation: bounceBalls 2.5s infinite;
 }
 
@@ -475,7 +483,6 @@ span {
     bottom: 30px;
     right: -50px;
     width: 200px;
-    z-index: -1;
     animation: bounceBalls 2s infinite;
 }
 
@@ -484,7 +491,6 @@ span {
     top: 100px;
     left: 200px;
     width: 50px;
-    z-index: -1;
     animation: bounceBalls 3s infinite;
 }
 
@@ -523,11 +529,28 @@ span {
     }
 }
 
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes fadeInFromBottom {
     0% {
         opacity: 0;
-        transform: translateY(70px);
+        transform: translateY(50px);
     }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+
     100% {
         opacity: 1;
         transform: translateY(0);

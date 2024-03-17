@@ -7,25 +7,25 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import ballLight from "../images/ball-light.svg";
 import ballDark from "../images/ball-dark.svg";
 
-function Contacts() {
+function Contacts({ isLightMode }) {
     return (
-        <section className="contacts" id="contacts">
+        <section className={!isLightMode ? "contacts contacts-dark" : "contacts"} id="contacts">
             <Container className="contacts-container">
-                <h3 className="contacts-title">Contacts</h3>
+                <h3 className={!isLightMode ? "contacts-title text-dark" : "contacts-title"}>Contatti</h3>
                 <Row>
-                    <Col className="contacts-column" lg={4}>
+                    <Col className="contacts-column" lg={4} data-aos="fade-in" data-aos-duration="1000">
                         <div className="contacts-item">
                             <FontAwesomeIcon className="contacts-icon" icon={faPhone} />
-                            <h4><a href="tel:+393426476626">342 6476626</a></h4>
+                            <h4><a className={!isLightMode ? "text-dark" : null} href="tel:+393426476626">342 6476626</a></h4>
                         </div>
                     </Col>
-                    <Col className="contacts-column" lg={4}>
+                    <Col className="contacts-column" lg={4} data-aos="fade-in" data-aos-duration="1000">
                         <div className="contacts-item">
                             <FontAwesomeIcon className="contacts-icon" icon={faEnvelope} />
-                            <h4><a href="mailto:francescomerighi61@gmail.com">francescomerighi61@gmail.com</a></h4>
+                            <h4><a className={!isLightMode ? "text-dark" : null} href="mailto:francescomerighi61@gmail.com">francescomerighi61@gmail.com</a></h4>
                         </div>
                     </Col>
-                    <Col className="contacts-column" lg={4}>
+                    <Col className="contacts-column" lg={4} data-aos="fade-in" data-aos-duration="1000">
                         <div className="contacts-item">
                                 <FontAwesomeIcon className="contacts-icon" icon={faWhatsapp} />
                                 <h4>

@@ -6,6 +6,7 @@
     width: 100%;
     transition: all .3s ease-in-out;
     z-index: 999;
+    animation: fadeInFromTopBounce .75s forwards;
 }
 
 .header-scroll {
@@ -36,12 +37,14 @@
 .header-logo h2 a {
     text-decoration: none;
     color: var(--text-color);
+    transition: all .3s ease-in-out;
 }
 
 .header-menu {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     list-style: none;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -70,6 +73,16 @@
     width: 100%;
 }
 
+.header-menu button, .header-menu-mobile button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    width: 35px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
 .header-hamburger {
     display: none;
 }
@@ -83,6 +96,22 @@
 
 .hamburger-line + .hamburger-line {
     margin-top: 5px;
+}
+
+@keyframes fadeInFromTopBounce {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 992px) {

@@ -1,0 +1,48 @@
+.header-scroll-dark {
+    background-color: rgb(41, 41, 41) !important;
+    z-index: 999;
+}
+
+.header-nav-mobile-dark {
+    background-color: rgb(41, 41, 41) !important;
+}
+
+.hero-dark, .about-me-dark, .skills-dark, .projects-dark, .contacts-dark {
+    background-color: rgb(41, 41, 41);
+}
+
+.footer-dark {
+    background-color: rgb(54, 54, 54);
+}
+
+.choice-container-dark {
+    background-color: rgb(36, 36, 36);
+}
+
+.choice-container-dark a:hover {
+    background-color: rgba(128, 128, 128, 0.295);
+}
+
+.text-dark-link {
+    color: var(--floral-white) !important;
+}
+
+.text-dark-link:hover {
+    color: var(--dark-cyan) !important;
+}
+
+.text-dark {
+    color: var(--floral-white) !important;
+}
+
+.hamburger-line-dark {
+    background-color: var(--floral-white) !important;
+}
+
+.down-arrow-icon-dark path {
+    fill: var(--floral-white) !important;
+}
+
+.project-list-item-dark {
+    background-color: rgba(202, 255, 255, 0.816) !important;
+}
