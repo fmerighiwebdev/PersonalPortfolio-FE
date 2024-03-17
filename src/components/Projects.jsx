@@ -38,7 +38,7 @@ function Projects({ isLightMode }) {
                                 <a href="https://github.com/francescomerighi1202/Keeper-App" target="_blank" rel="noreferrer">GitHub &rarr;</a>
                             </div>
                         </div>
-                        <div class="projects-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="projects-item" data-aos="fade-up">
                             <div class="logo-container">
                                 <img src={trePiniLogo} alt="Keeper Logo"></img>
                             </div>
@@ -64,7 +64,7 @@ function Projects({ isLightMode }) {
                                 <a href="https://www.ristorante3pini.it" target="_blank" rel="noreferrer">Visita il sito &rarr;</a>
                             </div>
                         </div>
-                        <div class="projects-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="projects-item" data-aos="fade-up">
                         <div class="logo-container">
                                 <img src={alTeatroLogo} alt="Keeper Logo"></img>
                             </div>

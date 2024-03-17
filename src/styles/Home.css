@@ -142,7 +142,6 @@ span {
     top: 0;
     right: 0;
     width: clamp(18.75rem, 4.821rem + 57.143vw, 56.25rem);
-    z-index: -1;
 }
 
 .shapes-up-desk {

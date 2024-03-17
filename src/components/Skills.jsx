@@ -19,7 +19,7 @@ function Skills({ isLightMode }) {
                                 <li className={!isLightMode ? "text-dark" : null}>Sviluppo FULL-Responsive</li>
                             </ul>
                         </div>
-                        <div class="skills-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skills-item" data-aos="fade-up">
                             <p className={!isLightMode ? "text-dark" : null}><strong>BACK-END</strong>: Sono in grado di realizzare server high-performance per gestire l'accesso e la logica di gestione dei dati</p>
                             <ul>
                                 <li className={!isLightMode ? "text-dark" : null}>Node.js e NPM</li>
@@ -35,7 +35,7 @@ function Skills({ isLightMode }) {
                                 <li className={!isLightMode ? "text-dark" : null}>Endpoints testing con Postman</li>
                             </ul>
                         </div>
-                        <div class="skills-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skills-item" data-aos="fade-up">
                             <p className={!isLightMode ? "text-dark" : null}><strong>UI/UX e WEB DESIGN</strong>: Sono in grado di creare design systems coerenti e intuitivi</p>
                             <ul>
                                 <li className={!isLightMode ? "text-dark" : null}>Design systems con Figma</li>
