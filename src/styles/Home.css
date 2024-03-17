@@ -670,9 +670,10 @@ span {
     }
 
     .choice-container {
-        top: 55px;
+        top: -75px;
+        left: 0;
         padding: .5rem 1rem;
-        animation: fadeIn .3s ease-in-out;
+        animation: fadeInFromBottom .3s ease-in-out;
     }
 
     .about-me-content:nth-child(2) img:nth-child(1) {
