@@ -220,6 +220,14 @@ span {
     margin: 0;
 }
 
+.about-me span {
+    font-weight: bold;
+}
+
+.skills span {
+    font-weight: bold;
+}
+
 .cv-download {
     padding: .5rem 1rem;
     font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);

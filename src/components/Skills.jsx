@@ -26,7 +26,6 @@ function Skills({ isLightMode }) {
                                 <li>Express.js</li>
                                 <li>Gestione richieste HTTP e relative risposte</li>
                                 <li>Implementazione di RESTful APIs</li>
-                                <li>Integrazione di database</li>
                                 <li>PostgreSQL</li>
                                 <li>MongoDB</li>
                                 <li>Autenticazione e sicurezza</li>
