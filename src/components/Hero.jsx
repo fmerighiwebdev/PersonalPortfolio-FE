@@ -24,7 +24,7 @@ function Hero({ isLightMode }) {
                                 <a aria-label="GitHub Link" href="https://github.com/francescomerighi1202" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faGithub} />
                                 </a>
-                                <a aria-label="Instagram Link" href="https://www.instagram.com/emmeelite/" target="_blank" rel="noreferrer">
+                                <a aria-label="Instagram Link" href="https://www.instagram.com/f.merighi_/" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
                             </div>
