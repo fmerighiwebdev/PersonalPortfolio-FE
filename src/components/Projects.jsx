@@ -6,6 +6,7 @@ import trePiniLogo from "../images/3-pini-logo.svg";
 import alTeatroLogo from "../images/al-teatro-logo.svg";
 import weatherLogo from "../images/weather-icon.svg";
 import translateLogo from "../images/translate-icon.svg";
+import currencyLogo from "../images/currency-icon.svg";
 
 function Projects({ isLightMode }) {
   return (
@@ -17,6 +18,52 @@ function Projects({ isLightMode }) {
         <h3 className="projects-title">I miei progetti</h3>
         <div className="projects-content">
           <div className="projects-grid">
+            <div className="projects-item" data-aos="fade-up">
+              <div className="logo-container">
+                <img src={currencyLogo} alt="GlobalCurrency App Logo"></img>
+              </div>
+              <div className="project-name">
+                <h4>GlobalCurrency App</h4>
+                <p>Applicazione Web</p>
+              </div>
+              <div className="project-description">
+                <p>
+                  GlobalCurrency App è un'applicazione web che consente agli
+                  utenti di visualizzare e convertire i prezzi delle valute in
+                  tempo reale e controllare la validità degli indirizzi dei
+                  wallet crypto.
+                </p>
+              </div>
+              <div className="project-technologies">
+                <p>Tecnologie utilizzate:</p>
+                <ul>
+                  <li>React.js</li>
+                  <li>Node.js</li>
+                  <li>Bootstrap</li>
+                  <li>Express.js</li>
+                  <li>CurrencyBeacon API</li>
+                  <li>Swapzone API</li>
+                  <li>CoinMarketCap API</li>
+                </ul>
+              </div>
+              <div className="project-links">
+                <a
+                  href="https://github.com/francescomerighi1202/GlobalCurrency-App-FE"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub - FE &rarr;
+                </a>
+                <a
+                  href="https://github.com/francescomerighi1202/GlobalCurrency-App-BE"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ marginTop: "1rem" }}
+                >
+                  GitHub - BE &rarr;
+                </a>
+              </div>
+            </div>
             <div className="projects-item" data-aos="fade-up">
               <div className="logo-container">
                 <img src={translateLogo} alt="Translator App Logo"></img>
