@@ -8,6 +8,7 @@ import weatherLogo from "../images/weather-icon.svg";
 import translateLogo from "../images/translate-icon.svg";
 import currencyLogo from "../images/currency-icon.svg";
 import escLogo from "../images/esc-logo.svg";
+import escLogoWhite from "../images/esc-logo-white.svg";
 
 function Projects({ isLightMode }) {
   return (
@@ -21,7 +22,7 @@ function Projects({ isLightMode }) {
           <div className="projects-grid">
             <div className="projects-item" data-aos="fade-up">
               <div className="logo-container">
-                <img src={escLogo} alt="GlobalCurrency App Logo"></img>
+                <img src={isLightMode ? escLogo : escLogoWhite} alt="GlobalCurrency App Logo"></img>
               </div>
               <div className="project-name">
                 <h4>ESC CORPORATION</h4>
