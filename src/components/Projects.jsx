@@ -7,6 +7,7 @@ import alTeatroLogo from "../images/al-teatro-logo.svg";
 import weatherLogo from "../images/weather-icon.svg";
 import translateLogo from "../images/translate-icon.svg";
 import currencyLogo from "../images/currency-icon.svg";
+import escLogo from "../images/esc-logo.svg";
 
 function Projects({ isLightMode }) {
   return (
@@ -18,6 +19,43 @@ function Projects({ isLightMode }) {
         <h3 className="projects-title">I miei progetti</h3>
         <div className="projects-content">
           <div className="projects-grid">
+            <div className="projects-item" data-aos="fade-up">
+              <div className="logo-container">
+                <img src={escLogo} alt="GlobalCurrency App Logo"></img>
+              </div>
+              <div className="project-name">
+                <h4>ESC CORPORATION</h4>
+                <p>E-Commerce</p>
+              </div>
+              <div className="project-description">
+                <p>
+                  GlobalCurrency App è un'applicazione web che consente agli
+                  utenti di visualizzare e convertire i prezzi delle valute in
+                  tempo reale e controllare la validità degli indirizzi dei
+                  wallet crypto.
+                </p>
+              </div>
+              <div className="project-technologies">
+                <p>Tecnologie utilizzate:</p>
+                <ul>
+                  <li>WordPress</li>
+                  <li>WooCommerce</li>
+                  <li>PHP</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>Marketing Tools</li>
+                </ul>
+              </div>
+              <div className="project-links">
+                <a
+                  href="https://esccorp.it"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visita il sito web &rarr;
+                </a>
+              </div>
+            </div>
             <div className="projects-item" data-aos="fade-up">
               <div className="logo-container">
                 <img src={currencyLogo} alt="GlobalCurrency App Logo"></img>
@@ -220,7 +258,7 @@ function Projects({ isLightMode }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visita il sito &rarr;
+                  Visita il sito web &rarr;
                 </a>
               </div>
             </div>
@@ -253,7 +291,7 @@ function Projects({ isLightMode }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visita il sito &rarr;
+                  Visita il sito web &rarr;
                 </a>
               </div>
             </div>
