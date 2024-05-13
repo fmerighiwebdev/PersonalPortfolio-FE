@@ -29,10 +29,8 @@ function Projects({ isLightMode }) {
               </div>
               <div className="project-description">
                 <p>
-                  GlobalCurrency App è un'applicazione web che consente agli
-                  utenti di visualizzare e convertire i prezzi delle valute in
-                  tempo reale e controllare la validità degli indirizzi dei
-                  wallet crypto.
+                  Sviluppo design, sviluppo e-commerce shop, hosting, SEO e marketing per
+                  il brand "ESC CORPORATION" di Trento (TN)
                 </p>
               </div>
               <div className="project-technologies">
@@ -47,11 +45,7 @@ function Projects({ isLightMode }) {
                 </ul>
               </div>
               <div className="project-links">
-                <a
-                  href="https://esccorp.it"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="https://esccorp.it" target="_blank" rel="noreferrer">
                   Visita il sito web &rarr;
                 </a>
               </div>
