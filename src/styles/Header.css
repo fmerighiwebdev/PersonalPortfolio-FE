@@ -38,6 +38,10 @@
     transition: all .3s ease-in-out;
 }
 
+.header-logo img {
+    width: clamp(3.125rem, 2.429rem + 2.857vw, 5rem);
+}
+
 .header-menu {
     display: flex;
     gap: 3rem;

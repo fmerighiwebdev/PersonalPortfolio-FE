@@ -502,6 +502,21 @@ span {
     animation: bounceBalls 3s infinite;
 }
 
+.right-click {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in-out;
+    z-index: 1000;
+    background-color: var(--dark-cyan);
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    animation: fadeIn .5s ease-in-out;
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0);

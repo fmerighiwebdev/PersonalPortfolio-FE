@@ -4,6 +4,8 @@ import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
+import fmLogo from "../images/fm-logo.svg";
+
 import "../styles/Header.css";
 import "../styles/Dark.css";
 
@@ -39,7 +41,7 @@ function Header({ isLightMode, setIsLightMode }) {
                         : "header"}>
       <Container className="header-container">
         <div className="header-logo">
-            <h2><a className={!isLightMode ? "text-dark" : null} href="#hero">FM</a></h2>
+            <h1><img src={fmLogo} alt="FM Logo" /></h1>
         </div>
         
         <nav className="header-nav">
@@ -64,9 +66,9 @@ function Header({ isLightMode, setIsLightMode }) {
           <nav className={!isLightMode ? "header-nav-mobile-dark header-nav-mobile" : "header-nav-mobile"}>
             <ul className="header-menu-mobile">
               <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#about-me">About me</a></li>
-              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#skills">My Skills</a></li>
-              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#projects">My Projects</a></li>
-              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#contacts">Contacts</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#skills">Skills</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#projects">Progetti</a></li>
+              <li className="menu-item-mobile"><a onClick={handleMenuClick} href="#contacts">Contatti</a></li>
               <li onClick={handleSwitchMode} className="switch-mode">
                 {!isLightMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
               </li>

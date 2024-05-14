@@ -10,15 +10,42 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
-
   const [isLightMode, setIsLightMode] = React.useState(true);
+  const [rightClick, setRightClick] = React.useState(false);
 
   React.useEffect(() => {
     AOS.init();
   });
 
+  React.useEffect(() => {
+    const disableRightClick = (event) => {
+      event.preventDefault();
+      setRightClick(true);
+    };
+
+    document.addEventListener("contextmenu", disableRightClick);
+
+    return () => {
+      setRightClick(false);
+      document.removeEventListener("contextmenu", disableRightClick);
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (rightClick) {
+      setTimeout(() => {
+        setRightClick(false);
+      }, 2000);
+    }
+
+    return () => {
+      clearTimeout();
+    };
+  }, [rightClick]);
+
   return (
     <>
+      {rightClick && <div className="right-click">Click destro disattivato</div>}
       <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
       <Home isLightMode={isLightMode} />
       <Footer isLightMode={isLightMode} />
