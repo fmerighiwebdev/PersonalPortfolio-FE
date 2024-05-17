@@ -22,7 +22,7 @@ function Projects({ isLightMode }) {
           <div className="projects-grid">
             <div className="projects-item" data-aos="fade-up">
               <div className="logo-container">
-                <img src={isLightMode ? escLogo : escLogoWhite} alt="GlobalCurrency App Logo"></img>
+                <img src={isLightMode ? escLogo : escLogoWhite} alt="ESC Logo"></img>
               </div>
               <div className="project-name">
                 <h4>ESC CORPORATION</h4>
