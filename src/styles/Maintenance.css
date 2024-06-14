@@ -106,7 +106,35 @@
 }
 
 .rotate {
-    animation: rotate 3s infinite !important;
+    animation: rotate 3s infinite;
+}
+
+.maintenance-ball-big, .maintenance-ball-md, .maintenance-ball-sm {
+    position: absolute;
+}
+
+.maintenance-ball-big {
+    width: clamp(12.5rem, 10.179rem + 9.524vw, 18.75rem);
+    height: clamp(12.5rem, 10.179rem + 9.524vw, 18.75rem);
+    top: -50px;
+    left: -50px;
+    animation: bounceBalls 2.5s ease-in-out infinite;
+}
+
+.maintenance-ball-md {
+    width: clamp(6.25rem, 3.929rem + 9.524vw, 12.5rem);
+    height: clamp(6.25rem, 3.929rem + 9.524vw, 12.5rem);
+    top: 50px;
+    right: -50px;
+    animation: bounceBalls 2.5s .5s ease-in-out infinite;
+}
+
+.maintenance-ball-sm {
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    left: 50px;
+    animation: bounceBalls 2.5s 1s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import fmLogo from "../images/fm-logo.svg";
 
@@ -8,9 +9,11 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 
+import ballDark from "../images/ball-dark.svg";
+import ballLight from "../images/ball-light.svg";
+
 import "../styles/Maintenance.css";
 import "../styles/Animations.css";
-import { Link } from "react-router-dom";
 
 function Maintenance() {
   function rotateLogo() {
@@ -26,6 +29,9 @@ function Maintenance() {
 
   return (
     <main className="maintenance-mode-container">
+      <img className="maintenance-ball-big" src={ballDark} alt="Balls" />
+      <img className="maintenance-ball-md" src={ballLight} alt="Balls" />
+      <img className="maintenance-ball-sm" src={ballLight} alt="Balls" />
       <section className="maintenance-mode-section">
         <div className="maintenance-logo-container">
           <img src={fmLogo} alt="FM Logo" />
