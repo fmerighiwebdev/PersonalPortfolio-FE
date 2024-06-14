@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    height: -webkit-fill-available;
 }
 
 .maintenance-mode-section {
@@ -119,5 +118,9 @@
 @media (max-width: 576px) {
     .maintenance-mode-contacts ul {
         gap: 2rem;
+    }
+
+    .maintenance-mode-container {
+        height: 90vh;
     }
 }
