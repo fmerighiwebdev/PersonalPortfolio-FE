@@ -504,14 +504,15 @@ span {
 
 .right-click {
     position: fixed;
-    top: 150px;
+    top: 75px;
     left: 50%;
     transform: translateX(-50%);
     transition: all .3s ease-in-out;
     z-index: 1000;
     background-color: var(--dark-cyan);
-    padding: 1rem;
+    padding: .75rem;
     border-radius: 5px;
+    font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
     color: white;
     font-weight: bold;
     animation: fadeIn .5s ease-in-out;
@@ -560,23 +561,6 @@ span {
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 

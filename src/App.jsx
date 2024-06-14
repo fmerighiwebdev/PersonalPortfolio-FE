@@ -1,5 +1,5 @@
 import React from "react";
-import AOS from 'aos';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./styles/App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,14 +8,14 @@ import 'aos/dist/aos.css';
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Maintenance from "./components/Maintenance";
+import BookCall from "./components/BookCall";
 
 function App() {
   const [isLightMode, setIsLightMode] = React.useState(true);
   const [rightClick, setRightClick] = React.useState(false);
-
-  React.useEffect(() => {
-    AOS.init();
-  });
+  
+  const isMaintenanceMode = true;
 
   React.useEffect(() => {
     const disableRightClick = (event) => {
@@ -45,10 +45,26 @@ function App() {
 
   return (
     <>
-      {rightClick && <div className="right-click">Click destro disattivato</div>}
-      <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
-      <Home isLightMode={isLightMode} />
-      <Footer isLightMode={isLightMode} />
+      {rightClick && (
+        <div className="right-click">Click destro disattivato</div>
+      )}
+      {isMaintenanceMode ? (
+        <Router>
+          <Routes>
+            <Route path="/" element={<Maintenance />} />
+            <Route path="/book-a-call" element={<BookCall />} />
+          </Routes>
+        </Router>
+      ) : (
+        <>
+          {rightClick && (
+            <div className="right-click">Click destro disattivato</div>
+          )}
+          <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
+          <Home isLightMode={isLightMode} />
+          <Footer isLightMode={isLightMode} />
+        </>
+      )}
     </>
   );
 }
