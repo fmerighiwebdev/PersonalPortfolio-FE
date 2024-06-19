@@ -1,0 +1,77 @@
+.privacy-policy-container {
+    margin-block: 5rem;
+}
+
+.privacy-policy-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.privacy-policy-header h1 {
+    color: var(--dark-cyan);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.814rem + 0.762vw, 2.5rem);
+    width: fit-content;
+    border-bottom: 3px solid var(--dark-cyan);
+}
+
+.privacy-policy-header img {
+    width: clamp(4.375rem, 3.679rem + 2.857vw, 6.25rem);
+}
+
+.privacy-policy-content {
+    margin-top: 3rem;
+}
+
+.privacy-policy-content a {
+    color: var(--dark-cyan);
+    font-weight: 600;
+}
+
+.privacy-policy-intro {
+    margin-bottom: 2rem;
+}
+
+.privacy-policy-intro h2 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.314rem + 0.762vw, 2rem);
+}
+
+.privacy-policy-intro p {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
+}
+
+.privacy-policy-part {
+    margin-top: 2rem;
+}
+
+.privacy-policy-part h3 {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 1.114rem + 0.381vw, 1.5rem);
+}
+
+.privacy-policy-part p {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
+}
+
+.book-a-call-privacy {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: .875rem;
+    margin-block: 1rem;
+}
+
+.book-a-call-privacy a {
+    color: var(--dark-cyan);
+    font-weight: 600;
+    text-decoration: none;
+}

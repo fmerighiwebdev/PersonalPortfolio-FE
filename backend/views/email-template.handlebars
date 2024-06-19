@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM - Email Template</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        .email-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #3799A6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-content {
+            margin-top: 2rem;
+        }
+
+        .booked-job, .booked-phone {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #3799A6;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .email-row {
+            width: 100%;
+            display: flex;
+        }
+
+        .booked-day, .booked-time {
+            width: 100%;
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid #3799A6;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .booked-time {
+            margin-left: .5rem;
+        }
+
+        .booked-job {
+            margin-bottom: .5rem;
+        }
+
+        .booked-phone {
+            margin-top: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="email-container">
+        <header class="email-header">
+            <h1>{{ name }} {{ surname }} ha richiesto di fissare una chiamata con te!</h1>
+        </header>
+        <section class="email-content">
+            <div class="booked-job">
+                <h2>Lavoro</h2>
+                <p>{{ job }}</p>
+            </div>
+            <div class="email-row">
+                <div class="booked-day">
+                    <h2>Giorno</h2>
+                    <p>{{ date }}</p>
+                </div>
+                <div class="booked-time">
+                    <h2>Ora</h2>
+                    <p>{{ hour }}</p>
+                </div>
+            </div>
+            <div class="booked-phone">
+                <h2>Telefono</h2>
+                <p>{{ phone }}</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import ballDark from "../images/ball-dark.svg";
 import ballLight from "../images/ball-light.svg";
@@ -37,7 +37,7 @@ function Maintenance() {
           <img src={fmLogo} alt="FM Logo" />
         </div>
         <h1 className="maintenance-mode-title">In aggiornamento...</h1>
-        <div className="overline-text">
+        <div className="maintenance-overline-text">
           <h2>Per qualsiasi informazione o richiesta contattami qui</h2>
         </div>
         <div className="maintenance-mode-contacts">
@@ -54,20 +54,20 @@ function Maintenance() {
             </li>
             <li>
               <a
+                href="https://www.linkedin.com/in/francesco-merighi-373939217/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.instagram.com/fmerighi.dev"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://t.me/fmerighiwebdev"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faTelegram} />
               </a>
             </li>
           </ul>
