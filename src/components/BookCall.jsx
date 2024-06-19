@@ -26,7 +26,10 @@ function BookCall() {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/send-contact", userContact);
+      await axios.post(
+        "https://personalportfolio-be.onrender.com/api/send-contact",
+        userContact
+      );
       navigate("/successfully-send");
     } catch (error) {
       setError(error.response.data.error);
